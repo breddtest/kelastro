@@ -6,6 +6,11 @@ const showAnswerButton = document.getElementById("show-answer-button");
 const image = document.querySelector("img");
 const questionNumber = document.getElementById("question-number");
 
+document.getElementById("retryButton").addEventListener("click", function() {
+    shuffleArray(quizData);
+    location.reload();
+});
+
 // Define your questions, answers, and image URLs
 const quizData = [
     {
@@ -23,6 +28,13 @@ const quizData = [
 ];
 
 let currentQuestionIndex = 0;
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 // Function to display the current question and image
 function displayQuestion() {
