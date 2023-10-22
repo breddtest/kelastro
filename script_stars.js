@@ -38,6 +38,7 @@ function shuffleArray(array) {
 
 // Function to display the current question and image
 function displayQuestion() {
+    shuffleArray(quizData);
     questionText.textContent = "What is the name of the star shown above?";
     image.src = quizData[currentQuestionIndex].imageURL;
     questionNumber.textContent = "Question #" + (currentQuestionIndex + 1);
