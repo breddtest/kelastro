@@ -10,3 +10,7 @@ To access the website:
 6. Type (Your account name).github.io/(repository name)/(folder name [if there is])/(file name with extension)
 7. Click enter
 8. Enjoy your own website
+
+Notes:
+1. Icons in mobile have a strict rule regarding its size (has to be a multiple of 48x48 px)
+2. You need to add "?" behind the href link for icons to appear in Github Pages
