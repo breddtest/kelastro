@@ -14,3 +14,4 @@ To access the website:
 Notes:
 1. Icons in mobile have a strict rule regarding its size (has to be a multiple of 48x48 px)
 2. You need to add "?" behind the href link for icons to appear in Github Pages
+3. Different browsers and different OS may need icons of different sizes
