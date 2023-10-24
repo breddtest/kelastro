@@ -16,3 +16,5 @@ Notes:
 2. You need to add "?" behind the href link for icons to appear in Github Pages
 3. Different browsers and different OS may need icons of different sizes
 4. Changing from .png to .ico changes nothing :(
+5. Added Google Analytics
+6. Used Pandas to help in creating the json
