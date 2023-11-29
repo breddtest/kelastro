@@ -139,6 +139,7 @@ function shuffleArray(array) {
 function displayQuestion() {
     shuffleArray(quizData);
     messierNumber.textContent = quizData[currentQuestionIndex].number;
+    questionText.style.color = 'black';
     questionText.textContent = "Where is the location of the messier object?";
     questionNumber.textContent = "Question #" + (currentQuestionIndex + 1);
 }
@@ -149,6 +150,7 @@ function checkAnswer() {
     const correctAnswer = quizData[currentQuestionIndex].answer.toLowerCase();
 
     if (userAnswer === correctAnswer) {
+        questionText.style.color = 'green';
         questionText.textContent = "Correct! Moving to the next question...";
         answerInput.value = "";
         currentQuestionIndex++;
@@ -156,10 +158,12 @@ function checkAnswer() {
         if (currentQuestionIndex < quizData.length) {
             setTimeout(displayQuestion, 1500); // Delay before displaying the next question
         } else {
+            questionText.style.color = 'black';
             questionText.textContent = "Quiz completed!";
             submitButton.disabled = true;
         }
     } else {
+        questionText.style.color = 'red';
         questionText.textContent = "Incorrect. Try again.";
     }
 }
