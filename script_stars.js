@@ -14,16 +14,16 @@ document.getElementById("retryButton").addEventListener("click", function() {
 // Define your questions, answers, and image URLs
 const quizData = [
     {
-        answer: "orion",
-        imageURL: "images_kelastro/orion.png"
+        answer: "alnilam",
+        imageURL: "images_kelastro/orion1.png"
     },
     {
-        answer: "answer2",
-        imageURL: "image2.png"
+        answer: "alnitak",
+        imageURL: "images_kelastro/orion2.png"
     },
     {
-        answer: "answer3",
-        imageURL: "image3.png"
+        answer: "mintaka",
+        imageURL: "images_kelastro/orion3.png"
     }
 ];
 
@@ -39,7 +39,8 @@ function shuffleArray(array) {
 // Function to display the current question and image
 function displayQuestion() {
     shuffleArray(quizData);
-    questionText.textContent = "What is the name of the star shown above?";
+    questionText.textContent = "What is the common name of the star shown above?";
+    questionText.style.color = 'black';
     image.src = quizData[currentQuestionIndex].imageURL;
     questionNumber.textContent = "Question #" + (currentQuestionIndex + 1);
 }
@@ -51,6 +52,7 @@ function checkAnswer() {
 
     if (userAnswer === correctAnswer) {
         questionText.textContent = "Correct! Moving to the next question...";
+        questionText.style.color = 'green';
         answerInput.value = "";
         currentQuestionIndex++;
 
@@ -58,15 +60,18 @@ function checkAnswer() {
             setTimeout(displayQuestion, 1500); // Delay before displaying the next question
         } else {
             questionText.textContent = "Quiz completed!";
+            questionText.style.color = 'black';
             submitButton.disabled = true;
         }
     } else {
         questionText.textContent = "Incorrect. Try again.";
+        questionText.style.color = 'red';
     }
 }
 
 function showAnswer() {
     const correctAnswer = quizData[currentQuestionIndex].answer;
+    questionText.style.color = 'black';
     questionText.textContent = `The correct answer is: ${correctAnswer}`;
 }
 
