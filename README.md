@@ -1,6 +1,8 @@
 # kelastro
 Website bertema edukasi yang bertujuan untuk menghafal rasi bintang, bintang, dan objek messier di langit
 
+Link: https://bryanherdianto.github.io/observation-practices-for-astronomy/menu.html
+
 To access the website:
 1. Go to Settings
 2. Click pages
